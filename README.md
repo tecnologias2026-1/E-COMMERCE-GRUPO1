@@ -1,6 +1,6 @@
 Para Completar por grupo
 
-🌐 Nombre del Proyecto
+🌐 SportSwear
 
 Se propone el desarrollo de una plataforma web de E-commerce para la venta de ropa, que cuente con un catálogo organizado por categorías, un sistema de búsqueda y filtrado, un módulo de registro e inicio de sesión, un carrito de compras y un sistema de pago en línea. 
 
