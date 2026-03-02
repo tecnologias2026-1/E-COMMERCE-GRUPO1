@@ -67,7 +67,7 @@ Explicar qué proceso representa.
 
 Colocar aquí el enlace público de Figma:
 
-https://figma.com/xxxxx
+https://www.figma.com/design/wBy3xG5vQbejtgDTo2estd/sportswear?node-id=146-1116&p=f&t=nnXW2Z1SuLF53naf-0
 
 
 🗄️ 6. Diseño de Base de Datos
