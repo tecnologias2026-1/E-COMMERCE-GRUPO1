@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>SportShop</title>
+		<link rel="stylesheet" href="css/estilo.css" />
+		<link rel="stylesheet" href="css/navbar.css" />
+		<link rel="stylesheet" href="css/hero.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="navbar__left">
+				<div class="logo">S</div>
+				<div class="brand">SportShop</div>
+			</div>
+
+			<div class="navbar__center">
+				<form class="search" role="search">
+					<input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" />
+				</form>
+			</div>
+
+			<nav class="navbar__right">
+				<div class="nav-links">
+					<a href="/products">Productos</a>
+					<a href="/products#hombres">Hombre</a>
+					<a href="/products#mujeres">Mujer</a>
+					<a href="/login">Iniciar Sesión</a>
+				</div>
+				<div class="nav-icons">
+					<a href="/cart" class="icon" aria-label="Carrito"><img src="assets/icons/cart.svg" alt="Carrito"></a>
+					<a href="/account" class="icon" aria-label="Cuenta"><img src="assets/icons/user.svg" alt="Cuenta"></a>
+					<button class="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+				</div>
+				<!-- mobile menu (hidden by default) -->
+				<div class="mobile-menu" aria-hidden="true">
+					<a href="/products">Productos</a>
+					<a href="/products#hombres">Hombre</a>
+					<a href="/products#mujeres">Mujer</a>
+					<a href="/login">Iniciar Sesión</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero__overlay"></div>
+				<div class="hero__content">
+					<h1>Viste tu Pasión<br/>Deportiva</h1>
+					<p>Encuentra la ropa deportiva perfecta para cada entrenamiento. Calidad, comodidad y estilo en un solo lugar.</p>
+					<div class="hero__actions">
+						<a class="btn btn--primary" href="#">Explorar Productos →</a>
+						<a class="btn btn--secondary" href="#">Colección</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Info features -->
+			<section class="section">
+				<div class="container">
+					<div class="features">
+						<div class="feature">
+							<div class="icon"><img src="assets/icons/truck.svg" alt="envio"></div>
+							<h3>Envío gratis</h3>
+							<p>En compras superiores a $100.000</p>
+						</div>
+						<div class="feature">
+							<div class="icon"><img src="assets/icons/shield.svg" alt="seguridad"></div>
+							<h3>Compra segura</h3>
+							<p>Tus datos están protegidos</p>
+						</div>
+						<div class="feature">
+							<div class="icon"><img src="assets/icons/trending.svg" alt="calidad"></div>
+							<h3>Mejor calidad</h3>
+							<p>Productos de marcas reconocidas</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Categories -->
+			<section class="section">
+				<div class="container">
+					<h2 style="text-align:center;margin:10px 0 22px;color:#111;font-size: 32px;">Compra por categoría</h2>
+					<div class="categories">
+						<div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1520975698517-62f5bdc4b9c9?w=800');background-size:cover;background-position:center">Hombre</div>
+						<div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1520975698517-62f5bdc4b9c9?w=800');background-size:cover;background-position:center">Mujer</div>
+						<div class="cat-card" style="background-image:url('https://images.unsplash.com/photo-1520975698517-62f5bdc4b9c9?w=800');background-size:cover;background-position:center">Unisex</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Featured products -->
+			<section class="section products-section">
+				<div class="container">
+					<div style="display:flex;justify-content:space-between;align-items:center">
+						<h2 style="margin:0;color:#111;font-size: 32px;">Productos destacados</h2>
+						<a href="#" style="color:#111;opacity:0.8;text-decoration:none">Ver todos →</a>
+					</div>
+					<div class="products-grid">
+						<div class="product-card">
+								<div class="product-image">
+									<img src="assets/images/camiseta.png" alt="Camiseta Running Pro">
+								</div>
+								<div class="product-body">
+									<span class="product-tag">Camisetas</span>
+									<h3 class="product-title">Camiseta Running Pro</h3>
+									<p class="product-desc">Camiseta técnica de alta transpirabilidad para running. Tejido ligero y de secado rápido.</p>
+									<div class="product-footer">
+										<div class="price">$45.000</div>
+									</div>
+								</div>
+						</div>
+						<div class="product-card">
+								<div class="product-image">
+									<img src="assets/images/pantalon.png" alt="Leggings Fitness Elite">
+								</div>
+								<div class="product-body">
+									<span class="product-tag">Pantalones</span>
+									<h3 class="product-title">Leggings Fitness Elite</h3>
+									<p class="product-desc">Leggings de compresión con tecnología anti-sudor. Perfectos para entrenamientos intensos.</p>
+									<div class="product-footer">
+										<div class="price">$45.000</div>
+									</div>
+								</div>
+						</div>
+						<div class="product-card">
+								<div class="product-image">
+									<img src="assets/images/chaqueta.png" alt="Chaqueta Térmica">
+								</div>
+								<div class="product-body">
+									<span class="product-tag">Chaquetas</span>
+									<h3 class="product-title">Chaqueta Térmica</h3>
+									<p class="product-desc">Chaqueta térmica perfecta para entrenamientos al aire libre en invierno. Resistente al agua.</p>
+									<div class="product-footer">
+										<div class="price">$45.000</div>
+									</div>
+								</div>
+						</div>
+						<div class="product-card">
+								<div class="product-image">
+									<img src="assets/images/shorts.png" alt="Short Training Pro">
+								</div>
+								<div class="product-body">
+									<span class="product-tag">Shorts</span>
+									<h3 class="product-title">Short Training Pro</h3>
+									<p class="product-desc">Short ligero y cómodo para entrenamientos. Bolsillos laterales y cintura ajustable.</p>
+									<div class="product-footer">
+										<div class="price">$45.000</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-grid">
+				<div class="footer-brand">
+					<div class="logo">SportSwear</div>
+					<p>Tu tienda de confianza para ropa deportiva de alta calidad. Equipamos a atletas de todos los niveles.</p>
+				</div>
+				<div class="footer-columns footer-links">
+					<h4>Enlaces rápidos</h4>
+					<ul>
+						<li><a href="/products">Productos</a></li>
+						<li><a href="/products#hombres">Hombre</a></li>
+						<li><a href="/products#mujeres">Mujer</a></li>
+						<li><a href="/cart">Carrito</a></li>
+					</ul>
+				</div>
+				<div class="footer-columns footer-links">
+					<h4>Atención al cliente</h4>
+					<ul>
+						<li><a href="#">Preguntas frecuentes</a></li>
+						<li><a href="#">Política de Devoluciones</a></li>
+						<li><a href="#">Términos y condiciones</a></li>
+					</ul>
+				</div>
+				<div class="footer-columns footer-contact">
+					<h4>Contacto</h4>
+					<a href="tel:+573001234567">Cel: +57 300 123 4567</a>
+					<a href="mailto:info@sportwear.com">info@sportwear.com</a>
+					<address style="color:rgba(255,255,255,0.7);font-style:normal;margin-top:8px">Calle 123 #45-67, Bogotá, Colombia</address>
+				</div>
+			</div>
+			<div class="footer-bottom">© 2026 SportSwear — Todos los derechos reservados</div>
+		</footer>
+	</body>
+	<script>
+	// Small script to toggle mobile menu
+	(function(){
+	  const btn = document.querySelector('.hamburger');
+	  const menu = document.querySelector('.mobile-menu');
+	  if(!btn || !menu) return;
+	  btn.addEventListener('click', ()=>{
+	    const open = menu.classList.toggle('show');
+	    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+	  });
+	  // close on outside click
+	  document.addEventListener('click', (e)=>{
+	    if(!menu.classList.contains('show')) return;
+	    if(e.target===btn || menu.contains(e.target)) return;
+	    menu.classList.remove('show');
+	    btn.setAttribute('aria-expanded','false');
+	    menu.setAttribute('aria-hidden','true');
+	  });
+	})();
+	</script>
+</html>
