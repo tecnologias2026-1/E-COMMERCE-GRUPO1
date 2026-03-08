@@ -33,6 +33,7 @@
 					<a href="#account" class="icon" aria-label="Cuenta"><img src="assets/icons/user.svg" alt="Cuenta"></a>
 					<button class="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
 				</div>
+                <!-- mobile menu (hidden by default) -->
 				<div class="mobile-menu" aria-hidden="true">
 					<a href="index.html">Productos</a>
 					<a href="hombre.html">Hombre</a>
@@ -197,6 +198,25 @@
 					document.getElementById(formId).classList.add('active');
 				});
 			});
-		</script>
-	</body>
+	// Small script to toggle mobile menu
+	(function(){
+	  const btn = document.querySelector('.hamburger');
+	  const menu = document.querySelector('.mobile-menu');
+	  if(!btn || !menu) return;
+	  btn.addEventListener('click', ()=>{
+	    const open = menu.classList.toggle('show');
+	    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+	  });
+	  // close on outside click
+	  document.addEventListener('click', (e)=>{
+	    if(!menu.classList.contains('show')) return;
+	    if(e.target===btn || menu.contains(e.target)) return;
+	    menu.classList.remove('show');
+	    btn.setAttribute('aria-expanded','false');
+	    menu.setAttribute('aria-hidden','true');
+	  });
+	})();
+	</script>
 </html>
+git status
