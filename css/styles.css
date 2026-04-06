@@ -194,6 +194,36 @@ a {
   min-width: 200px;
 }
 
+/* Enlace que contiene logo + marca: mostrar en línea (lado a lado) */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-link .brand {
+  margin: 0;
+}
+
+/* Reglas más específicas por si hay conflictos: */
+.navbar__left > .brand-link {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: var(--spacing-sm) !important;
+}
+
+.navbar__left .logo {
+  flex: 0 0 auto;
+}
+
+.navbar__left .brand {
+  display: inline-block;
+  margin-left: var(--spacing-sm);
+}
+
 .logo {
   width: 40px;
   height: 40px;

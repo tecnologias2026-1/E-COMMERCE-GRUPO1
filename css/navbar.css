@@ -1,3 +1,35 @@
+:root{
+  --bg:#ffffff;
+  --text:#0a0a0a;
+  --muted:#717182;
+  --search-bg:#f1f1f1;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:var(--text)}
+
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 163px}
+.navbar-left{display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:8px}
+.brand-logo{width:32px;height:32px;border-radius:16px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px}
+.brand-name{font-weight:700;font-size:20px}
+
+.search{display:flex;align-items:center;gap:12px;background:var(--search-bg);padding:8px 12px;border-radius:7px;width:376px}
+.search-icon{width:16px;height:16px;flex:0 0 16px}
+.search input{border:0;background:transparent;outline:none;font-size:14px;color:var(--muted);width:100%}
+
+.navbar-right{display:flex;align-items:center;gap:24px}
+.nav-link{font-weight:500;color:var(--text);text-decoration:none;font-size:14px}
+
+.icon-btn{background:transparent;border:0;padding:6px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.icon-btn svg{width:20px;height:20px}
+
+.btn-ghost{display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);text-decoration:none;color:var(--text);font-weight:500}
+
+@media (max-width:900px){
+  .navbar{padding:10px 20px}
+  .search{display:none}
+}
 /* Navbar component styles */
 .navbar{
   width:100%;

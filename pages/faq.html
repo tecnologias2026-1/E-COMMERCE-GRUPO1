@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preguntas Frecuentes - SportSwear">
+  <title>Preguntas Frecuentes - SportSwear</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .page-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--spacing-5xl) var(--spacing-2xl);
+    }
+
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-2xl);
+    }
+
+    .faq-item {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-neutral-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition-base);
+    }
+
+    .faq-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacing-xl);
+      background-color: var(--color-neutral-50);
+      cursor: pointer;
+      user-select: none;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-dark);
+    }
+
+    .faq-question:hover {
+      background-color: var(--color-neutral-100);
+    }
+
+    .faq-toggle {
+      font-size: 20px;
+      color: var(--color-primary-dark);
+      transition: transform var(--transition-base);
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-base);
+      background-color: var(--color-white);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: var(--spacing-xl);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .breadcrumb {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-2xl);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .breadcrumb a {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .page-content {
+        padding: var(--spacing-3xl) var(--spacing-lg);
+      }
+
+      .faq-question {
+        padding: var(--spacing-lg);
+        font-size: var(--font-size-base);
+      }
+
+      .faq-answer-content {
+        padding: var(--spacing-lg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__left">
+      <div class="logo">S</div>
+      <div class="brand">SportShop</div>
+    </div>
+
+    <div class="navbar__center">
+      <form class="search" role="search">
+        <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" />
+      </form>
+    </div>
+
+			<nav class="navbar__right">
+				<div class="nav-links">
+					<a href="/pages/productos.html">Productos</a>
+					<a href="/pages/productos.html?category=hombre">Hombre</a>
+					<a href="/pages/productos.html?category=mujer">Mujer</a>
+					<a href="/pages/login.html">Iniciar Sesión</a>
+				</div>
+				<div class="nav-icons">
+					<a href="/pages/carrito.html" class="icon" aria-label="Carrito"><img src="/assets/icons/cart.svg" alt="Carrito"></a>
+					<a href="/pages/admin-productos.html" class="icon" aria-label="Cuenta"><img src="/assets/icons/user.svg" alt="Cuenta"></a>
+					<button class="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+				</div>
+				<!-- mobile menu (hidden by default) -->
+				<div class="mobile-menu" aria-hidden="true">
+					<a href="/pages/productos.html">Productos</a>
+					<a href="/pages/productos.html?category=hombre">Hombre</a>
+					<a href="/pages/productos.html?category=mujer">Mujer</a>
+					<a href="/pages/login.html">Iniciar Sesión</a>
+				</div>
+			</nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="page-content">
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span>/</span>
+      <span>Preguntas Frecuentes</span>
+    </nav>
+
+    <h1 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-xl); color: var(--color-text-dark);">Preguntas Frecuentes</h1>
+    <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-3xl);">Encuentra respuestas a las preguntas más comunes sobre nuestros productos y servicios.</p>
+
+    <div class="faq-container">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cómo realizo una compra en SportSwear?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Realizar una compra es muy sencillo. Solo debes:</p>
+            <ol style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+              <li>Navegar por nuestro catálogo de productos</li>
+              <li>Seleccionar el producto, talla y cantidad deseada</li>
+              <li>Agregar al carrito</li>
+              <li>Proceder al checkout</li>
+              <li>Ingresar tus datos de envío y pago</li>
+              <li>Confirmar tu pedido</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cuál es el tiempo de envío?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Los tiempos de envío dependen de tu ubicación:</p>
+            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+              <li><strong>Bogotá y zona metropolitana:</strong> 1-2 días hábiles</li>
+              <li><strong>Otras ciudades de Colombia:</strong> 3-5 días hábiles</li>
+              <li><strong>Ciudades remotas:</strong> 5-7 días hábiles</li>
+            </ul>
+            <p style="margin-top: var(--spacing-md);">El envío es gratis en compras superiores a $100.000.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Puedo devolver un producto?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Sí, puedes devolver productos dentro de 30 días después de la compra, siempre que:</p>
+            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+              <li>El producto esté en perfectas condiciones</li>
+              <li>Tenga todas las etiquetas originales</li>
+              <li>No haya sido usado</li>
+              <li>Incluya el recibo de compra</li>
+            </ul>
+            <p style="margin-top: var(--spacing-md);">Para más información, consulta nuestra <a href="politica-devoluciones.html" style="color: var(--color-primary-dark); text-decoration: underline;">Política de Devoluciones</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cuáles son los métodos de pago disponibles?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Aceptamos los siguientes métodos de pago:</p>
+            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+              <li>Tarjeta de crédito (Visa, MasterCard, American Express)</li>
+              <li>Tarjeta de débito</li>
+              <li>Transferencia bancaria</li>
+              <li>Wallet digital (Google Pay, Apple Pay)</li>
+              <li>Pago contra entrega (en ciudades seleccionadas)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Cómo puedo rastrear mi pedido?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Una vez confirmado tu pedido, recibirás un correo electrónico con un número de seguimiento. Puedes usar este número para rastrear tu paquete en tiempo real en nuestro sitio web o en el sitio del transportista.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Los productos son originales?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Sí, todos nuestros productos son 100% originales y auténticos. Trabajamos directamente con distriburidores autorizados y marcas reconocidas. Cada producto viene con garantía del fabricante.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Puedo cambiar una talla después de comprar?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Sí, puedes cambiar la talla de tu producto dentro de 15 días después de la compra, sin costo adicional. Contacta a nuestro equipo de atención al cliente en info@sportswear.com o llama al +57 300 123 6754.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <span>¿Ofrecen descuentos o promociones?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Sí, regularmente ofrecemos:</p>
+            <ul style="margin-left: var(--spacing-lg); margin-top: var(--spacing-md);">
+              <li>Descuentos por compra en cantidad</li>
+              <li>Promociones semanales y mensuales</li>
+              <li>Código de descuento para suscriptores del newsletter</li>
+              <li>Ofertas especiales en temporadas (Black Friday, Navidad, etc.)</li>
+            </ul>
+            <p style="margin-top: var(--spacing-md);">Suscríbete a nuestro newsletter para recibir las mejores ofertas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: var(--color-neutral-50); padding: var(--spacing-2xl); border-radius: var(--radius-lg); margin-top: var(--spacing-5xl); text-align: center;">
+      <h3 style="margin-bottom: var(--spacing-md);">¿Aún tienes preguntas?</h3>
+      <p style="color: var(--color-text-secondary); margin-bottom: var(--spacing-lg);">Contáctanos directamente, estamos aquí para ayudarte.</p>
+      <a href="mailto:info@sportswear.com" class="btn btn-primary">Envíar Email</a>
+      <p style="margin-top: var(--spacing-lg); color: var(--color-text-secondary); font-size: var(--font-size-sm);">Teléfono: +57 300 123 6754</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>SportSwear</h3>
+        <p>Tu tienda de confianza para ropa deportiva de alta calidad. Equipamos a atletas de todos los niveles.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="productos.html?category=hombre">Hombre</a></li>
+          <li><a href="productos.html?category=mujer">Mujer</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Atención al Cliente</h3>
+        <ul>
+          <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <div class="footer-contact">
+          <span class="footer-contact-icon">📍</span>
+          <p>Calle 123 #45-67<br>Bogotá, Colombia</p>
+        </div>
+        <div class="footer-contact">
+          <span class="footer-contact-icon">📞</span>
+          <p>+57 300 123 6754</p>
+        </div>
+        <div class="footer-contact">
+          <span class="footer-contact-icon">📧</span>
+          <p>info@sportswear.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 SportSwear. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">📷</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
