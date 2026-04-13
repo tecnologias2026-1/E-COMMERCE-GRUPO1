@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function gotoCart() {
-    if (isInPages()) window.location.href = 'carrito.html';
+    if (isInPages()) window.location.href = 'detalle-producto.html';
     else window.location.href = 'pages/carrito.html';
   }
 
